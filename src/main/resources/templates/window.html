@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Num of Windows</title>
+</head>
+<body>
+<h1>Fill In The Form</h1>
+<form action="#" th:action="@{/url}" th:object="${numOfWindows}" method="post">
+    <p>Number of windows: <input type="number" th:field="*{numOfWindows}" id="numOfWindows"/></p>
+    <p th:if="${#fields.hasErrors('numOfWindows')}">Invalid Number</p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
